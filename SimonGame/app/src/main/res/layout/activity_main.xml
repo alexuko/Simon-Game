@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/color_dark">
+
+    <LinearLayout
+        android:id="@+id/buttons_game_mode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btn_1_player"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="1 Player mode"
+            android:textSize="17dp"
+            android:textColor="@color/color_Btn_Idle"
+            android:textStyle="normal"
+            android:onClick="gameSingleMode"
+            android:layout_margin="7dp"/>
+        <Button
+            android:id="@+id/btn_2_player"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="2 Players mode"
+            android:textSize="17dp"
+            android:textColor="@color/color_Btn_Idle"
+            android:textStyle="normal"
+            android:onClick="gameTwoPlayersMode"
+            android:layout_margin="7dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tv_game_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttons_game_mode"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/tv_who_is_playing"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="PLAYER"
+            android:textColor="@color/color_white"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:padding="5dp"/>
+        <TextView
+            android:id="@+id/tv_timer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="10"
+            android:textColor="@color/color_Yellow_secondary"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:padding="5dp"/>
+        <TextView
+            android:id="@+id/tv_level"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="LEVEL: 0"
+            android:textColor="@color/color_white"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:padding="5dp"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/cards_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_game_info"
+        android:gravity="center">
+
+        <com.example.simongame.CustomView
+            android:id="@+id/simon_panel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
